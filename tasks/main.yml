@@ -17,6 +17,9 @@
 
 # Configure MySQL.
 - include: configure.yml
+
+- meta: flush_handlers
+
 - include: secure-installation.yml
 - include: databases.yml
 - include: users.yml

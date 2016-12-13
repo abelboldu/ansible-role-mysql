@@ -42,6 +42,9 @@
     owner: root
     group: root
     mode: 0600
+  notify: restart mysql
+
+- meta: flush_handlers
 
 - name: Get list of hosts for the anonymous user.
   command: mysql -NBe 'SELECT Host FROM mysql.user WHERE User = ""'
